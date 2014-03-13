@@ -1,0 +1,15 @@
+extends layout
+block content
+    div#wrapper    
+    table(border=1)
+        thead
+            tr
+                td ID
+                td 이름
+            each user in userList
+                tr
+                    td 
+                        a(href='/view?id=#{user.id}') #{user.id} 
+                    td #{user.name}
+                    
+    a(href='/insertForm') 등록

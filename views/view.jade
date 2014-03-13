@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    div#wrapper
+    table(border=1)
+        tbody
+            tr
+                th ID
+                td=id
+            tr
+                th 이름
+                td=name
+            tr
+                th 비밀번호
+                td=password
+                
+    a(href='/del?id=#{id}') 삭제   
+    a(href='/list') 리스트
